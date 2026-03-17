@@ -19,11 +19,6 @@ app.post('/api/enquiry', (req, res) => {
   res.json({ success: true, message: `Thank you ${name}! We will call you at ${phone} within 15 minutes.` });
 });
 
-// ✅ Noida page route
-app.get('/swiftride/travel-in-noida', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'travel-in-noida.html'));
-});
-
 // Catch all
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
